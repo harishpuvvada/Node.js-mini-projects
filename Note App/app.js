@@ -46,7 +46,7 @@ var command = argv._[0];
 if (command === 'add'){
     var note = notes.addNote(argv.title,argv.body);
     if (note){
-      notes.logNote(note);
+      notes.logNote(note);                                //add a new note
     } else{
       console.log("Note already exists");
     }
@@ -55,7 +55,7 @@ if (command === 'add'){
 else if (command === 'list') {
   var AllNotes = notes.getAll();
   console.log(`Printing ${AllNotes.length} note(s).`);
-  AllNotes.forEach((note)=>{
+  AllNotes.forEach((note)=>{                                //list all note(s)
     notes.logNote(note);
   });
 }
@@ -63,7 +63,7 @@ else if (command === 'list') {
 else if (command === 'read') {
    var note = notes.getNote(argv.title);
    if(note){
-    notes.logNote(note);
+    notes.logNote(note);                                //read a note 
           }
    else{
     console.log("Note not found");
@@ -72,12 +72,12 @@ else if (command === 'read') {
 
 
 else if (command === 'remove') {
-   var noteRemoved = notes.remove(argv.title);
+   var noteRemoved = notes.remove(argv.title);                                //remove a  note
    var message = noteRemoved ? "Note removed" : "remove command failed" ;
    console.log(message);
 
 }
 
 else{
-  console.log('command note recognized');
+  console.log('command note recognized'); 
 }

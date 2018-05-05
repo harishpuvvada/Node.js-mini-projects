@@ -1,8 +1,0 @@
-{
-  "name": "",
-  "version": "",
-  "dependencies": {
-    "request": "^2.73.0",
-    "yargs": "^4.8.1"
-  }
-}

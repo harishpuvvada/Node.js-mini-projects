@@ -24,6 +24,7 @@ var geocodeAddress = (address,callback) => {
         Latitude : body.results[0].geometry.location.lat,
         Longitude : body.results[0].geometry.location.lng
 
+        
       });
   	}
   });
